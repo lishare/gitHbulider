@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>测试拖拽</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			
+			.boxList {
+				margin: 40px auto;
+				width: 300px;
+				height: 300px;
+				position: relative;
+				overflow: hidden;
+				overflow-y: auto;
+				border: 2px solid orangered;
+			}
+			.boxOneItem,.boxItem {
+				float: left;
+				margin: 10px 15px 0;
+				cursor: move;
+			}
+			
+			.textContent {
+				width: 80px;
+				height: 30px;
+				text-align: center;
+				line-height: 30px;
+				background: cadetblue;
+				color: #fff;
+				border-radius: 4px;
+			}
+			
+			.closeIcon {
+				width: 20px;
+				height: 20px;
+				text-align: center;
+				line-height: 20px;
+				background: rgba(0, 0, 0, .5);
+				border-radius: 100%;
+				position: absolute;
+				top: -10px;
+				right: -10px;
+			}
+			.lastBox{
+				position: relative;
+			}
+		</style>
+	</head>
+
+	<body>
+		
+		<div class="wrap">
+			<div id="boxOne" class="boxList showBox">
+				<div class="boxOneItem">
+					<div class="textContent">内容</div>
+					<i class="closeIcon">×</i>
+				</div>
+				<div class="boxOneItem">
+					<div class="textContent">内容</div>
+					<i class="closeIcon">×</i>
+				</div>
+				<div class="boxOneItem">
+					<div class="textContent">内容</div>
+					<i class="closeIcon">×</i>
+				</div>
+				<div class="boxOneItem">
+					<div class="textContent">内容</div>
+					<i class="closeIcon">×</i>
+				</div>
+				<div class="boxOneItem">
+					<div class="textContent">内容</div>
+					<i class="closeIcon">×</i>
+				</div>
+				<div class="boxOneItem">
+					<div class="textContent">内容</div>
+					<i class="closeIcon">×</i>
+				</div>
+				<div class="boxOneItem">
+					<div class="textContent">内容</div>
+					<i class="closeIcon">×</i>
+				</div>
+				<div class="boxOneItem">
+					<div class="textContent">内容</div>
+					<i class="closeIcon">×</i>
+				</div>
+				<div class="boxOneItem">
+					<div class="textContent">内容</div>
+					<i class="closeIcon">×</i>
+				</div>
+				<div class="boxOneItem">
+					<div class="textContent">内容</div>
+					<i class="closeIcon">×</i>
+				</div>
+				<div class="boxOneItem">
+					<div class="textContent">内容</div>
+					<i class="closeIcon">×</i>
+				</div>
+				<div class="boxOneItem">
+					<div class="textContent">内容</div>
+					<i class="closeIcon">×</i>
+				</div>
+				<div class="boxOneItem">
+					<div class="textContent">内容</div>
+					<i class="closeIcon">×</i>
+				</div>
+				<div class="boxOneItem">
+					<div class="textContent">内容</div>
+					<i class="closeIcon">×</i>
+				</div>
+				<div class="boxOneItem">
+					<div class="textContent">内容</div>
+					<i class="closeIcon">×</i>
+				</div>
+				<div class="boxOneItem">
+					<div class="textContent">内容</div>
+					<i class="closeIcon">×</i>
+				</div>
+				<div class="boxOneItem">
+					<div class="textContent">内容</div>
+					<i class="closeIcon">×</i>
+				</div>
+				<div class="boxOneItem">
+					<div class="textContent">内容</div>
+					<i class="closeIcon">×</i>
+				</div>
+				<div class="boxOneItem">
+					<div class="textContent">内容</div>
+					<i class="closeIcon">×</i>
+				</div>
+				<div class="boxOneItem">
+					<div class="textContent">内容</div>
+					<i class="closeIcon">×</i>
+				</div>
+				<div class="boxOneItem">
+					<div class="textContent">内容</div>
+					<i class="closeIcon">×</i>
+				</div>
+				<div class="boxOneItem">
+					<div class="textContent">内容</div>
+					<i class="closeIcon">×</i>
+				</div>
+				<div class="boxOneItem">
+					<div class="textContent">内容</div>
+					<i class="closeIcon">×</i>
+				</div>
+				<div class="boxOneItem">
+					<div class="textContent">内容</div>
+					<i class="closeIcon">×</i>
+				</div>
+				<div class="boxOneItem">
+					<div class="textContent">内容</div>
+					<i class="closeIcon">×</i>
+				</div>
+				<div class="boxOneItem">
+					<div class="textContent">内容</div>
+					<i class="closeIcon">×</i>
+				</div>
+				<div class="boxOneItem">
+					<div class="textContent">内容</div>
+					<i class="closeIcon">×</i>
+				</div>
+				<div class="boxOneItem">
+					<div class="textContent">内容</div>
+					<i class="closeIcon">×</i>
+				</div>
+				<div class="boxOneItem">
+					<div class="textContent">内容</div>
+					<i class="closeIcon">×</i>
+				</div>
+				<div class="boxOneItem">
+					<div class="textContent">内容</div>
+					<i class="closeIcon">×</i>
+				</div>
+			</div>
+			
+		</div>	
+
+		<script src="js/jquery-2.0.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/Tdrag.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				$(".boxOneItem").Tdrag({
+					scope: "#boxOne",
+					pos: true,
+					dragChange: true
+				})
+				
+				$(".boxItem").Tdrag({
+					scope: "#boxTwo",
+					pos: true,
+					dragChange: true
+				})
+				
+			})
+			
+		</script>
+	</body>
+
+</html>
